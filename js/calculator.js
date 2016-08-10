@@ -3,6 +3,7 @@
 class Calculator {
 
     constructor (options) {
+        this.flag = false;
         this.container = options.container;
         this.result = this.container.querySelector('.result');
 
@@ -12,6 +13,10 @@ class Calculator {
     _getEventTarget(e) {
 
         if (e.target.hasAttribute('data-digit')) {
+            if (this.flag) {
+                this.flag = false;
+                this.result.textContent = '';
+            }
             this._addText(e.target.textContent);
         }
 
@@ -42,6 +47,7 @@ class Calculator {
     }
 
     _returnResult() {
+        this.flag = true;
         this.result.textContent = parseFloat(eval(this.result.textContent));
     }
 
