@@ -1,0 +1,12 @@
+td {
+    padding: 0 !important;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+td.result {
+    height: 30px;
+    line-height: 30px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/calculator.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="calc" class="col-md-3">
+            <table class="table table-inverse">
+                <tr>
+                    <td colspan="4" class="result text-md-right"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button data-clear class="btn btn-block btn-outline-warning">AC</button>
+                    </td>
+                    <td>
+                        <button data-percent class="btn btn-block btn-outline-warning">%</button>
+                    </td>
+                    <td>
+                        <button data-operand class="btn btn-block btn-outline-warning">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">7</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">8</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">9</button>
+                    </td>
+                    <td>
+                        <button data-operand class="btn btn-block btn-outline-warning">*</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">4</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">5</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">6</button>
+                    </td>
+                    <td>
+                        <button data-operand class="btn btn-block btn-outline-warning">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">1</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">2</button>
+                    </td>
+                    <td>
+                        <button data-digit class="btn btn-block btn-outline-success">3</button>
+                    </td>
+                    <td>
+                        <button data-operand class="btn btn-block btn-outline-warning">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button data-digit class="btn btn-block btn-outline-success">0</button>
+                    </td>
+                    <td>
+                        <button data-dot class="btn btn-block btn-outline-warning">.</button>
+                    </td>
+                    <td>
+                        <button data-result class="btn btn-block btn-outline-warning">=</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        new Calculator({
+            container: document.getElementById('calc')
+        });
+    </script>
+</body>
+</html>
